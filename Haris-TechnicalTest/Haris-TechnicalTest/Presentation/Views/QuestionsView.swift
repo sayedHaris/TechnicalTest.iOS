@@ -45,6 +45,31 @@ import SwiftUI
 //        }
 //    }
 //}
+//struct QuestionsView: View {
+//    @ObservedObject var viewModel = QuestionsViewModel()
+//    
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                if viewModel.isLoading {
+//                    ProgressView()
+//                } else {
+//                    List(viewModel.questions, id: \.self) { question in
+//                        NavigationLink(destination: QuestionDetailView(question: question)) {                        
+//                            Text(question.question)
+//                        }
+//                    }
+//                    .navigationTitle("Questions")
+//                }
+//            }
+//            .onAppear {
+//                if viewModel.questions.isEmpty {
+//                    viewModel.fetchQuestions()
+//                }
+//            }
+//        }
+//    }
+//}
 struct QuestionsView: View {
     @ObservedObject var viewModel = QuestionsViewModel()
     
@@ -55,8 +80,17 @@ struct QuestionsView: View {
                     ProgressView()
                 } else {
                     List(viewModel.questions, id: \.self) { question in
-                        NavigationLink(destination: QuestionDetailView(question: question)) {                        
-                            Text(question.question)
+                        NavigationLink(destination: QuestionDetailView(question: question)) {
+                            VStack(alignment: .leading) {
+                                Text("Difficulty: \(question.difficulty)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                Text("Category: \(question.category)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                Text(question.question)
+                                    .font(.headline)
+                            }
                         }
                     }
                     .navigationTitle("Questions")
@@ -70,19 +104,6 @@ struct QuestionsView: View {
         }
     }
 }
-//struct QuestionsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let questions = ["What is your favorite color?", "What is the capital of France?", "What is 2 + 2?"]
-//        QuestionsView(questions: questions)
-//    }
-//}
-//struct QuestionsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let viewModel = QuestionsViewModel()
-//        viewModel.questions = ["What is your favorite color?", "What is the capital of France?", "What is 2 + 2?"]
-//        return QuestionsView(viewModel: viewModel)
-//    }
-//}
 struct QuestionsView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = QuestionsViewModel()
