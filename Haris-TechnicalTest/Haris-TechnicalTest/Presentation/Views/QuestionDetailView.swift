@@ -7,27 +7,8 @@
 
 import SwiftUI
 
-//struct QuestionDetailView: View {
-//    let question: String // The selected question
-//    
-//    var body: some View {
-//        VStack {
-//            Text(question)
-//                .font(.title)
-//                .padding()
-//            // Add more details of the question here as needed
-//        }
-//        .navigationTitle("Question Details")
-//    }
-//}
-//
-//struct QuestionDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuestionDetailView(question: "What is your favorite color?")
-//    }
-//}
 struct QuestionDetailView: View {
-    let question: Question // The selected question
+    let question: Question
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -48,7 +29,6 @@ struct QuestionDetailView: View {
                 .padding(.bottom, 5)
             Text("Incorrect Answers: \(question.incorrectAnswers.joined(separator: ", "))")
                 .padding(.bottom, 5)
-            // Add more details of the question here as needed
         }
         .padding()
         .navigationTitle("Question Details")

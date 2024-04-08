@@ -6,25 +6,9 @@
 //
 
 import Foundation
-//struct Question: Codable {
-//    let difficulty: String
-//    let correctAnswer: String
-//    let incorrectAnswers: [String]
-//    let type: String
-//    let category: String
-//    let question: String
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case difficulty
-//        case correctAnswer = "correct_answer"
-//        case incorrectAnswers = "incorrect_answers"
-//        case type
-//        case category
-//        case question
-//    }
-//}
+
 struct Question: Codable, Hashable,Identifiable {
-    let id = UUID() // Add an id property conforming to Identifiable protocol
+    let id = UUID() 
     let difficulty: String
     let correctAnswer: String
     let incorrectAnswers: [String]

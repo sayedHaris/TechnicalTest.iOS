@@ -50,7 +50,7 @@ struct QuestionsView: View {
 struct QuestionsView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = QuestionsViewModel()
-        viewModel.fetchSampleQuestions() // Fetch sample questions
+        viewModel.fetchSampleQuestions() 
         return QuestionsView(viewModel: viewModel)
     }
 }

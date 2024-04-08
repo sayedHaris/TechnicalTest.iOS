@@ -32,9 +32,9 @@ class QuestionsViewModel: ObservableObject {
     
     func filteredQuestions(searchText: String) -> [Question] {
             if searchText.isEmpty {
-                return questions // Return all questions if search text is empty
+                return questions
             } else {
-                // Filter questions based on search text
+                
                 return questions.filter { $0.question.localizedCaseInsensitiveContains(searchText) }
             }
         }
