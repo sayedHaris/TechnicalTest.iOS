@@ -30,23 +30,41 @@ struct QuestionDetailView: View {
     let question: Question // The selected question
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 10) {
             Text(question.question)
                 .font(.title)
-                .padding()
+                .padding(.bottom, 5)
             Text("Category: \(question.category)")
-                .padding()
+                .padding(.bottom, 5)
             Text("Difficulty: \(question.difficulty)")
-                .padding()
-            Text("Type: \(question.type)")
-                .padding()
+                .padding(.bottom, 5)
+            HStack {
+                Text("Type:")
+                Spacer()
+                Badge(text: question.type == "boolean" ? "Boolean" : "Multiple Choice")
+            }
+            .padding(.bottom, 5)
             Text("Correct Answer: \(question.correctAnswer)")
-                .padding()
+                .padding(.bottom, 5)
             Text("Incorrect Answers: \(question.incorrectAnswers.joined(separator: ", "))")
-                .padding()
+                .padding(.bottom, 5)
             // Add more details of the question here as needed
         }
+        .padding()
         .navigationTitle("Question Details")
+    }
+}
+
+struct Badge: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.caption)
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+            .background(Color.blue)
+            .cornerRadius(8)
     }
 }
 

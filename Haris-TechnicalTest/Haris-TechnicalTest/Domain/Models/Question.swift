@@ -23,7 +23,8 @@ import Foundation
 //        case question
 //    }
 //}
-struct Question: Codable, Hashable {
+struct Question: Codable, Hashable,Identifiable {
+    let id = UUID() // Add an id property conforming to Identifiable protocol
     let difficulty: String
     let correctAnswer: String
     let incorrectAnswers: [String]

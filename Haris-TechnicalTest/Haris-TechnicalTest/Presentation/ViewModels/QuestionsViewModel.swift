@@ -7,25 +7,6 @@
 
 import Foundation
 
-//class QuestionsViewModel: ObservableObject {
-//    @Published var questions: [String] = []
-//    @Published var isLoading: Bool = false
-//    
-//    func fetchQuestions() {
-//        isLoading = true
-//        NetworkManager.shared.fetchQuestions { [weak self] result, error in
-//            guard let self = self else { return }
-//            DispatchQueue.main.async {
-//                self.isLoading = false
-//                if let error = error {
-//                    print("Error fetching questions: \(error)")
-//                } else {
-//                    self.questions = result ?? []
-//                }
-//            }
-//        }
-//    }
-//}
 class QuestionsViewModel: ObservableObject {
     @Published var questions: [Question] = []
     @Published var isLoading: Bool = false
@@ -48,4 +29,13 @@ class QuestionsViewModel: ObservableObject {
             }
         }
     }
+    
+    func filteredQuestions(searchText: String) -> [Question] {
+            if searchText.isEmpty {
+                return questions // Return all questions if search text is empty
+            } else {
+                // Filter questions based on search text
+                return questions.filter { $0.question.localizedCaseInsensitiveContains(searchText) }
+            }
+        }
 }

@@ -27,6 +27,8 @@
 		6E4FF2302BBDA7DE00511E3E /* FetchQuestionDetailUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FF2272BBDA7DE00511E3E /* FetchQuestionDetailUseCaseTests.swift */; };
 		6E4FF2312BBDA7DE00511E3E /* QuestionsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FF22D2BBDA7DE00511E3E /* QuestionsViewModelTests.swift */; };
 		6E4FF2322BBDA7DE00511E3E /* QuestionDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FF22E2BBDA7DE00511E3E /* QuestionDetailViewModelTests.swift */; };
+		6E4FF2342BC3F1FB00511E3E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FF2332BC3F1FB00511E3E /* SearchBar.swift */; };
+		6E4FF2362BC3FCF700511E3E /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4FF2352BC3FCF700511E3E /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		6E4FF2272BBDA7DE00511E3E /* FetchQuestionDetailUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchQuestionDetailUseCaseTests.swift; sourceTree = "<group>"; };
 		6E4FF22D2BBDA7DE00511E3E /* QuestionsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewModelTests.swift; sourceTree = "<group>"; };
 		6E4FF22E2BBDA7DE00511E3E /* QuestionDetailViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewModelTests.swift; sourceTree = "<group>"; };
+		6E4FF2332BC3F1FB00511E3E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		6E4FF2352BC3FCF700511E3E /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +146,8 @@
 		6E4FF1ED2BBC6E7900511E3E /* Haris-TechnicalTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				6E4FF2242BBDA7DE00511E3E /* DomainTests */,
 				6E4FF22B2BBDA7DE00511E3E /* PresentationTests */,
+				6E4FF2242BBDA7DE00511E3E /* DomainTests */,
 				6E4FF2282BBDA7DE00511E3E /* DataTests */,
 				6E4FF1EE2BBC6E7900511E3E /* Haris_TechnicalTestTests.swift */,
 			);
@@ -233,6 +237,7 @@
 			children = (
 				6E4FF2182BBC6F9100511E3E /* QuestionsView.swift */,
 				6E4FF2172BBC6F9100511E3E /* QuestionDetailView.swift */,
+				6E4FF2332BC3F1FB00511E3E /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 		6E4FF2292BBDA7DE00511E3E /* NetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				6E4FF2352BC3FCF700511E3E /* NetworkManagerTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				6E4FF2192BBC6F9100511E3E /* NetworkManager.swift in Sources */,
 				6E4FF2212BBC6F9100511E3E /* QuestionsView.swift in Sources */,
 				6E4FF21D2BBC6F9100511E3E /* FetchQuestionDetailUseCase.swift in Sources */,
+				6E4FF2342BC3F1FB00511E3E /* SearchBar.swift in Sources */,
 				6E4FF2202BBC6F9100511E3E /* QuestionDetailView.swift in Sources */,
 				6E4FF1DE2BBC6E7600511E3E /* Haris_TechnicalTestApp.swift in Sources */,
 				6E4FF21A2BBC6F9100511E3E /* QuestionRepository.swift in Sources */,
@@ -442,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4FF2362BC3FCF700511E3E /* NetworkManagerTests.swift in Sources */,
 				6E4FF22F2BBDA7DE00511E3E /* FetchQuestionsUseCaseTests.swift in Sources */,
 				6E4FF2322BBDA7DE00511E3E /* QuestionDetailViewModelTests.swift in Sources */,
 				6E4FF2302BBDA7DE00511E3E /* FetchQuestionDetailUseCaseTests.swift in Sources */,
