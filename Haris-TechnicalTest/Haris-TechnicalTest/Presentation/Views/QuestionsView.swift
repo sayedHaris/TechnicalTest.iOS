@@ -16,7 +16,7 @@ struct QuestionsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                SearchBar(searchText: $searchText) // Add search bar
+                SearchBar(searchText: $searchText) 
 
                 if viewModel.isLoading {
                     ProgressView()

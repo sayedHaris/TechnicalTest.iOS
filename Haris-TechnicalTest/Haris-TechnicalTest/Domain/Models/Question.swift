@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question: Codable, Hashable,Identifiable {
+struct Question: Codable,Identifiable {
     let id = UUID() 
     let difficulty: String
     let correctAnswer: String
@@ -49,22 +49,4 @@ struct Question: Codable, Hashable,Identifiable {
         case question
     }
     
-    // Implementing Hashable
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(difficulty)
-        hasher.combine(correctAnswer)
-        hasher.combine(incorrectAnswers)
-        hasher.combine(type)
-        hasher.combine(category)
-        hasher.combine(question)
-    }
-    
-    static func == (lhs: Question, rhs: Question) -> Bool {
-        return lhs.difficulty == rhs.difficulty &&
-            lhs.correctAnswer == rhs.correctAnswer &&
-            lhs.incorrectAnswers == rhs.incorrectAnswers &&
-            lhs.type == rhs.type &&
-            lhs.category == rhs.category &&
-            lhs.question == rhs.question
-    }
 }
